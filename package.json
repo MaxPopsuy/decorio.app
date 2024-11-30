@@ -1,0 +1,24 @@
+{
+  "name": "decorio.app",
+  "version": "1.0.0",
+  "description": "decorio app",
+  "main": "index.js",
+  "scripts": {
+    "start:client": "cd client && npm start",
+    "build:client": "cd client && npm run build",
+    "install:all": "npm run install:server && npm run install:client",
+    "install:server": "cd server && npm install",
+    "install:client": "cd client && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxPopsuy/decorio.app.git"
+  },
+  "author": "r3ichal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxPopsuy/decorio.app/issues"
+  },
+  "homepage": "https://github.com/MaxPopsuy/decorio.app#readme"
+}

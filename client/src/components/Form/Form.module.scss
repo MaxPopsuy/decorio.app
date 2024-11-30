@@ -1,0 +1,90 @@
+@import "@scss/variables.scss";
+@import "@scss/declarations.scss";
+
+.formSection {
+  background-color: $background-secondary;
+  color: $primary-white;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: "Mitr", sans-serif;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+
+  &__title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: $primary;
+    font-family: "Modulus", sans-serif;
+  }
+
+  &__description {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  &__inputGroup {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  &__label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: $primary-white;
+    text-align: left;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    background-color: $primary-gray;
+    color: $primary-white;
+  }
+
+  &__input {
+    height: 45px;
+  }
+
+  &__textarea {
+    height: 150px;
+    resize: none;
+  }
+
+  &__submit {
+    background-color: $primary;
+    color: $primary-white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+    }
+  }
+}

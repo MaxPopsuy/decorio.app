@@ -1,0 +1,98 @@
+@import "@scss/variables.scss";
+@import "@scss/declarations.scss";
+
+
+.landing {
+  height: 100vh;
+  background-color:$background-secondary;
+  color: $primary-white;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: "Mitr", sans-serif;
+  font-weight: 300;
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 70vh;
+
+
+  &__title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: $primary;
+    font-family: "Modulus", sans-serif;
+
+    &__span {
+      font-size: 30px;
+      color: $primary-white;
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__button {
+    background-color: $primary-blue;
+    color: $primary-white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-blue, 10%);
+    }
+  }
+
+  &__container {
+    margin: 0 auto;
+    position: relative;
+    width: 400px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+
+    &__image {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+}

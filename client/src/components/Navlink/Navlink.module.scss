@@ -1,0 +1,65 @@
+@import "@scss/variables.scss";
+@import "@scss/declarations.scss";
+
+.link {
+  display: inline-block;
+  position: relative;
+  font-size: 26px;
+  font-family: "Modulus", sans-serif;
+  font-weight: 700;
+  color: $primary-white;
+
+  transition: all 0.5s;
+
+  &--active {
+    color: $primary;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(1);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: $primary;
+      transform-origin: bottom center;
+      transition: all 0.5s ease;
+    }
+    transform: scaleX(1);
+    transform-origin: bottom center;
+  
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom center;
+    }
+  }
+  
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+  }
+}
+
+#link.link--active {
+
+  color: $primary;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $primary;
+    transform-origin: bottom center;
+    transition: all 0.5s ease;
+  }
+  transform: scaleX(1);
+  transform-origin: bottom center;
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+  }
+}
