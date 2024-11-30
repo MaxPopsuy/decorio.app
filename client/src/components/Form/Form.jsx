@@ -13,30 +13,31 @@ const Form = () => {
 
   return (
     <section className={styles.formSection}>
-      <h2 className={styles.formSection__title}>Contact Us</h2>
-      <p className={styles.formSection__description}>
-        Have a project in mind? Let us know, and we'll bring it to life!
-      </p>
-      <form onSubmit={handleSubmit} className={styles.formSection__form}>
-        {state.succeeded ? (
-          <div className={styles.formSection__successMessage}>
-            <p>Thanks for contacting us! We will get back to you soon.</p>
-          </div>
-        ) : (
-          <>
+      {state.succeeded ? (
+        <div className={styles.formSection__successMessage}>
+          <p className={styles.formSection__successMessage__text}>Thanks for contacting us! We will get back to you soon.</p>
+        </div>
+      ) : (
+        <>
+          <p className={styles.formSection__description}>
+            Have a project in mind? Let us know, and we'll bring it to life!
+          </p>
+          <form onSubmit={handleSubmit} className={styles.formSection__form}>
             <div className={styles.formSection__inputGroup}>
-              <label htmlFor="email" className={styles.formSection__label}>
-                Email Address
+              <label htmlFor="name" className={styles.formSection__label}>
+                Name
               </label>
               <input
-                id="email"
-                type="email"
-                name="email"
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
                 className={styles.formSection__input}
               />
               <ValidationError
-                prefix="Email"
-                field="email"
+                prefix="Name"
+                field="name"
                 errors={state.errors}
               />
             </div>
@@ -50,11 +51,11 @@ const Form = () => {
                 type="tel"
                 name="phone"
                 className={styles.formSection__input}
-                placeholder="Optional"
+                placeholder="Phone number"
+                required
               />
             </div>
 
-            {/* Conditional Message Field */}
             {showMessage && (
               <div className={styles.formSection__inputGroup}>
                 <label htmlFor="message" className={styles.formSection__label}>
@@ -74,15 +75,13 @@ const Form = () => {
               </div>
             )}
 
-            {!showMessage && (
-              <button
-                type="button"
-                onClick={() => setShowMessage(true)}
-                className={styles.formSection__showMessageButton}
-              >
-                Add a Message (Optional)
-              </button>
-            )}
+            <button
+              type="button"
+              onClick={() => setShowMessage(!showMessage)}
+              className={styles.formSection__showMessageButton}
+            >
+              {showMessage ? "Collapse" : "Extend"}
+            </button>
 
             <button
               type="submit"
@@ -91,9 +90,9 @@ const Form = () => {
             >
               Submit
             </button>
-          </>
-        )}
-      </form>
+          </form>
+        </>
+      )}
     </section>
   );
 };

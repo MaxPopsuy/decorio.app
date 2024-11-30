@@ -12,7 +12,25 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 70vh;
+  height: 70vh;
+
+  &__showMessageButton {
+    background-color: $primary-gray;
+    color: $primary-white;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+    margin-top: -10px;
+
+    &:hover {
+      background-color: darken($primary-gray, 5%);
+    }
+  }
 
   &__title {
     font-size: 36px;
@@ -23,12 +41,12 @@
   }
 
   &__description {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.6;
     margin-bottom: 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    text-align: center;
   }
 
   &__form {
@@ -40,15 +58,18 @@
   }
 
   &__inputGroup {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin-bottom: 15px;
   }
 
   &__label {
-    font-size: 16px;
+    font-size: 24px;
     margin-bottom: 8px;
     color: $primary-white;
     text-align: left;
+    align-self: flex-start;
   }
 
   &__input,
@@ -72,19 +93,29 @@
     resize: none;
   }
 
+  &__successMessage {
+    
+    &__text {
+      font-size: 36px;
+      font-weight: 500;
+    }
+  }
+
   &__submit {
-    background-color: $primary;
+    background-color: $purple;
     color: $primary-white;
-    padding: 12px 24px;
+    padding: 12px 60px;
     font-size: 18px;
     font-weight: 500;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 30px 0;
+    align-self: flex-start;
 
     &:hover {
-      background-color: darken($primary, 10%);
+      background-color: darken($purple, 10%);
     }
   }
 }
