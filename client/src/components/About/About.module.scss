@@ -1,0 +1,123 @@
+@import "@scss/variables.scss";
+@import "@scss/declarations.scss";
+
+.about-section {
+  background-color: $background-secondary;
+  color: $text-primary;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: "Nunito", "Montserrat", serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 70vh;
+
+  &__text-block {
+    width: 40vw;
+    padding: 20px;
+    color: $text-primary;
+  }
+
+  &__title {
+    font-family: "Comfortaa", "Nunito", sans-serif;
+    font-size: 32px;
+    color: $text-title;
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $text-primary;
+  }
+  &__image-slider {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: $background-secondary;
+  }
+  &__slider-provider {
+    height: calc(70vh + 105px);
+    width: 50vw;
+    position: relative;
+    overflow: hidden;
+    right: 0;
+    position: absolute;
+    right: 0;
+
+    // &::before,
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   left: 0;
+    //   right: 0;
+    //   height: 10%;
+    //   background: linear-gradient(to bottom, $background, $background-secondary);
+    //   z-index: 0;
+    //   pointer-events: none;
+    // }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+      transform: rotate(180deg);
+    }
+  }
+  &__buttons {
+  }
+  &__slider {
+  }
+  &__slide {
+  }
+  &__slide-image {
+  }
+  &__nav-button {
+  }
+  &__backwards-button {
+  }
+  &__forwards-button {
+  }
+}
+
+.slider {
+  position: relative;
+  max-width: 70vw;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: $secondary;
+
+  &__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 5px;
+
+    &--prev {
+      left: 10px;
+    }
+
+    &--next {
+      right: 10px;
+    }
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
