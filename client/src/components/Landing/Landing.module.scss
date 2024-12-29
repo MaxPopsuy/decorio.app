@@ -5,11 +5,11 @@
 .landing {
   height: 100vh;
   background-color:$background-secondary;
-  color: $primary-white;
+  color: $text-primary;
   padding: 50px 20px;
   text-align: center;
-  font-family: "Mitr", sans-serif;
-  font-weight: 300;
+  font-family: 'Nunito', 'Montserrat', serif;
+  font-weight: 400;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -24,11 +24,11 @@
     font-weight: 600;
     margin-bottom: 20px;
     color: $primary;
-    font-family: "Modulus", sans-serif;
+    font-family: 'Comfortaa', 'Nunito', sans-serif;
 
     &__span {
       font-size: 30px;
-      color: $primary-white;
+      color: $text-title;
     }
   }
 
@@ -42,8 +42,8 @@
   }
 
   &__button {
-    background-color: $primary-blue;
-    color: $primary-white;
+    background-color: $secondary;
+    color: $text-title;
     padding: 12px 24px;
     font-size: 18px;
     font-weight: 500;
@@ -53,7 +53,7 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: darken($primary-blue, 10%);
+      background-color: darken($secondary, 10%);
     }
   }
 

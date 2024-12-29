@@ -14,11 +14,11 @@
   align-items: center;
 
   &__logo {
-    font-family: "Cubano", sans-serif;
+    font-family: "Rubik Mono One", monospace;
     font-size: 36px;
     display: inline-block;
     position: relative;
-    color: $primary-white;
+    color: $text-title;
     font-weight: 900;
     transition: all 0.5s ease;
     text-align: center;
@@ -84,7 +84,7 @@
   font-family: "Modulus", sans-serif;
   font-size: 26px;
   font-weight: 700;
-  color: $primary-white;
+  color: $text-title;
 
   transition: color 0.5s ease-out;
 

@@ -4,7 +4,7 @@ import styles from "./Form.module.scss";
 import { alert } from "@pnotify/core";
 
 const Form = () => {
-  const [state, handleSubmit] = useForm("xkgnpyow");
+  const [state, handleSubmit] = useForm("xkgnpyow"); //! PLACEHOLDER BEFORE I WRITE NORMAL BACKEND
   const [showMessage, setShowMessage] = useState(false);
 
   if (state.succeeded) {
@@ -80,7 +80,7 @@ const Form = () => {
               onClick={() => setShowMessage(!showMessage)}
               className={styles.formSection__showMessageButton}
             >
-              {showMessage ? "Collapse" : "Extend"}
+              {showMessage ? "Collapse" : "Expand"}
             </button>
 
             <button

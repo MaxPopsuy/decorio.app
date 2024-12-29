@@ -3,11 +3,11 @@
 
 .formSection {
   background-color: $background-secondary;
-  color: $primary-white;
+  color: $text-primary;
   padding: 50px 20px;
   text-align: center;
-  font-family: "Mitr", sans-serif;
-  font-weight: 300;
+  font-family: 'Nunito', 'Montserrat', serif;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,8 +15,8 @@
   height: 70vh;
 
   &__showMessageButton {
-    background-color: $primary-gray;
-    color: $primary-white;
+    background-color: $secondary;
+    color: $text-primary;
     padding: 10px;
     font-size: 14px;
     font-weight: 500;
@@ -28,7 +28,7 @@
     margin-top: -10px;
 
     &:hover {
-      background-color: darken($primary-gray, 5%);
+      background-color: darken($background-secondary, 5%);
     }
   }
 
@@ -37,7 +37,7 @@
     font-weight: 600;
     margin-bottom: 20px;
     color: $primary;
-    font-family: "Modulus", sans-serif;
+    font-family: 'Comfortaa', 'Nunito', sans-serif;
   }
 
   &__description {
@@ -67,7 +67,8 @@
   &__label {
     font-size: 24px;
     margin-bottom: 8px;
-    color: $primary-white;
+    font-family: 'Comfortaa', 'Nunito', sans-serif; 
+    color: $text-primary;
     text-align: left;
     align-self: flex-start;
   }
@@ -80,8 +81,8 @@
     border-radius: 5px;
     border: 1px solid #ddd;
     margin-top: 5px;
-    background-color: $primary-gray;
-    color: $primary-white;
+    background-color: $background-secondary;
+    color: $text-title;
   }
 
   &__input {
@@ -102,8 +103,8 @@
   }
 
   &__submit {
-    background-color: $purple;
-    color: $primary-white;
+    background-color: $tertiary;
+    color: $text-title-dark;
     padding: 12px 60px;
     font-size: 18px;
     font-weight: 500;
@@ -115,7 +116,7 @@
     align-self: flex-start;
 
     &:hover {
-      background-color: darken($purple, 10%);
+      background-color: darken($tertiary, 10%);
     }
   }
 }
