@@ -12,25 +12,9 @@ import {
 import "pure-react-carousel/dist/react-carousel.es.css";
 import classnames from "classnames";
 
+//! SLIDER IS APLACEHOLDER, SHOULD GET IMAGES FROM DB/BACKEND
+
 const About = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
-
-  //! PLACEHOLDER, SHOULD GET IMAGES FROM DB/BACKEND
-  const images = [
-    "https://picsum.photos/600/400",
-    "https://picsum.photos/600/400",
-    "https://picsum.photos/600/400",
-  ];
 
   return (
     <section className={styles["about-section"]}>
